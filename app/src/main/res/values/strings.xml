@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RRR</string>
+    <string-array name="categories">
+        <item>electronics</item>
+        <item>clothes and accessories</item>
+        <item>shoes</item>
+        <item>home staff</item>
+        <item>kitchen</item>
+        <item>decoration</item>
+        <item>toys</item>
+        <item>furniture</item>
+        <item>bikes</item>
+        <item>bags</item>
+        <item>books</item>
+    </string-array>
+    <string-array name="condition">
+        <item>new</item>
+        <item>used</item>
+        <item>working</item>
+        <item>very good</item>
+        <item>not good</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>

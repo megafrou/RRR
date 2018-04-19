@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="108dp"
+        android:layout_height="119dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:descendantFocusability="blocksDescendants"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:text="Item category"
+            />
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:text="Item description"
+            />
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:text="Item date"
+            />
+        <TextView
+            android:id="@+id/item_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:text="Item condition"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

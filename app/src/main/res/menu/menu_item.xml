@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/allposts_id"
+        android:title="All items"
+
+        />
+    <item
+        android:id="@+id/myposts_id"
+        android:title="My items"
+        />
+    <item
+        android:id="@+id/newpost_id"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Add item"
+        android:visible="true"
+        app:showAsAction="always" />
+
+</menu>
