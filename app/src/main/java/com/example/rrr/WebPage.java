@@ -6,9 +6,6 @@ import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-/**
- * Created by user on 16/4/2018.
- */
 
 public class WebPage extends AppCompatActivity {
     @Override

@@ -6,10 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 
-/**
- * Created by user on 6/1/2018.
- */
-
 public class MyItemActivity extends AppCompatActivity {
 
 

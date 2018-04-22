@@ -35,6 +35,8 @@
         <activity android:name=".ItemActivity" />
         <activity android:name=".MyItemActivity" />
         <activity android:name=".NewItem" />
+        <activity android:name=".ItemActivityClick" />
+        <activity android:name=".MyItemActivityClick" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

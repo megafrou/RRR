@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="130dp">
+    android:layout_height="match_parent">
+
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="112dp"
-        android:layout_height="125dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="5dp"
-        android:layout_marginStart="5dp"
-        android:clickable="false"
-        android:focusable="false"
-        android:descendantFocusability="blocksDescendants"/>
+        android:layout_marginStart="5dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,11 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="5dp"
-            android:textSize="20sp"
-            android:clickable="false"
-            android:focusable="false"
-            android:descendantFocusability="blocksDescendants"
+            android:layout_marginLeft="15dp"
+            android:textSize="30sp"
             android:text="Item category"
             />
         <TextView
@@ -38,11 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"
-            android:textSize="15sp"
-            android:clickable="false"
-            android:focusable="false"
-            android:descendantFocusability="blocksDescendants"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
             android:text="Item description"
             />
         <TextView
@@ -50,11 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="5dp"
-            android:textSize="15sp"
-            android:clickable="false"
-            android:focusable="false"
-            android:descendantFocusability="blocksDescendants"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
             android:text="Item date"
             />
         <TextView
@@ -62,15 +53,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="5dp"
-            android:textSize="15sp"
-            android:clickable="false"
-            android:focusable="false"
-            android:descendantFocusability="blocksDescendants"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
             android:text="Item condition"
             />
-
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnedit"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop = "10dp"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/btndel"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Delete" />
+    </LinearLayout>
 
 </LinearLayout>

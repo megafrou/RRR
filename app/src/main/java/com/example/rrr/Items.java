@@ -1,20 +1,23 @@
 package com.example.rrr;
 
 
+import java.io.Serializable;
+
 /**
- * Created by user on 20/1/2018.
+ * Created by Christine Megarchioti on 20/1/2018.
  */
 
-public class Items {
-    private String  filename, path, date, category, description, condition;
+public class Items  {
+    private String  filename, path, date, category, description, condition, user;
 
-    public Items( String filename, String path, String date, String category, String description, String condition ){
-        this.setFilename(filename);
-        this.setPath(path);
-        this.setDate(date);
-        this.setCategory(category);
-        this.setDescription(description);
-        this.setCondition(condition);
+    public Items( String filename, String path, String date, String category, String description, String condition, String user ){
+        this.filename = filename;
+        this.path = path;
+        this.date = date;
+        this.category = category;
+        this.description = description;
+        this.condition = condition;
+        this.user = user;
     }
 
     public String getFilename() {
@@ -63,6 +66,14 @@ public class Items {
 
     public void setCondition(String condition) {
         this.condition = condition;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getImgUrl(){

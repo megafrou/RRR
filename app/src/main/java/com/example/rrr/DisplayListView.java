@@ -2,6 +2,7 @@ package com.example.rrr;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -11,13 +12,20 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
+import java.util.List;
+
+import static com.example.rrr.R.id.item_category;
+import static com.example.rrr.R.id.item_description;
 import static com.example.rrr.R.id.listview;
 
 public class DisplayListView extends AppCompatActivity {
@@ -52,7 +60,7 @@ public class DisplayListView extends AppCompatActivity {
             jsonArray = jsonObject.getJSONArray("items");
             Integer count = 0;
 
-            String filename, path, date, category, description, condition;
+            String filename, path, date, category, description, condition, user;
             while (count < jsonArray.length()) {
 
                 JSONObject JO = jsonArray.getJSONObject(count);
@@ -62,8 +70,9 @@ public class DisplayListView extends AppCompatActivity {
                 category = JO.getString("category");
                 description = JO.getString("description");
                 condition = JO.getString("item_condition");
+                user = JO.getString("user_id");
 
-                Items items = new Items(filename, path, date, category, description, condition);
+                Items items = new Items(filename, path, date, category, description, condition, user);
                 itemAdapter.add(items);
                 count++;
             }
@@ -75,17 +84,45 @@ public class DisplayListView extends AppCompatActivity {
        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
           @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-              Toast.makeText(getApplicationContext(), "You clicked ", Toast.LENGTH_SHORT).show();
-                //Object listItem = listView.getItemAtPosition(position);
-             //Intent intent = new Intent(getApplicationContext(), ItemActivityClick.class);
 
-              //startActivity(intent);
+              Items listItem = itemAdapter.getItem(position);
+
+              String category = listItem.getCategory();
+              String description = listItem.getDescription();
+              String condition = listItem.getCondition();
+              String date = listItem.getDate();
+              String user = listItem.getUser();
+              String url = listItem.getImgUrl();
+
+              if (user.equals(myemail))  {
+
+                  Intent intent = new Intent(getApplicationContext(), MyItemActivityClick.class);
+                  intent.putExtra("itclickcategory", category);
+                  intent.putExtra("itclickdescription", description);
+                  intent.putExtra("itclickcondition", condition);
+                  intent.putExtra("itclickdate", date);
+                  intent.putExtra("itclickuser", user);
+                  intent.putExtra("itimgurl", url);
+                  intent.putExtra("myuser", myemail);
+                  Toast.makeText(getApplicationContext(), "myuser "+myemail, Toast.LENGTH_LONG).show();
+                  startActivity(intent);
+              }
+              else{
+                  Intent intent = new Intent(getApplicationContext(), ItemActivityClick.class);
+                  intent.putExtra("itclickcategory", category);
+                  intent.putExtra("itclickdescription", description);
+                  intent.putExtra("itclickcondition", condition);
+                  intent.putExtra("itclickdate", date);
+                  intent.putExtra("itclickuser", user);
+                  intent.putExtra("itimgurl", url);
+                  intent.putExtra("myuser", myemail);
+                  Toast.makeText(getApplicationContext(), "myuser "+myemail, Toast.LENGTH_LONG).show();
+                  startActivity(intent);
+
+              }
 
        }
         });
-
-
-
     }
 
 

@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,6 +23,7 @@ import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,8 +33,9 @@ import java.util.List;
  * Created by user on 20/1/2018.
  */
 
-public class ItemAdapter extends ArrayAdapter {
-    List list = new ArrayList();
+public class ItemAdapter extends ArrayAdapter<Items>  {
+    private ArrayList<Items> list = new ArrayList<>();
+
 
     public ItemAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
@@ -50,7 +54,7 @@ public class ItemAdapter extends ArrayAdapter {
 
     @Nullable
     @Override
-    public Object getItem(int position) {
+    public Items getItem(int position) {
         return list.get(position);
     }
 
@@ -60,6 +64,7 @@ public class ItemAdapter extends ArrayAdapter {
         View row;
         ItemHolder itemHolder;
         row = convertView;
+        
 
         if(row==null)
         {
@@ -90,9 +95,9 @@ public class ItemAdapter extends ArrayAdapter {
         return row;
     }
 
-     class ItemHolder
+
+    class ItemHolder
     {
-        //TextView tx_filename, tx_path, tx_date, tx_category, tx_description, tx_condition;
         TextView  tx_date, tx_category, tx_description, tx_condition;
         ImageView tx_img;
     }

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="match_parent">
 
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="108dp"
-        android:layout_height="119dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="5dp"
         android:layout_marginStart="5dp"/>
@@ -25,7 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="20sp"
+            android:layout_marginLeft="15dp"
+            android:textSize="30sp"
             android:text="Item category"
             />
         <TextView
@@ -33,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
             android:text="Item description"
             />
         <TextView
@@ -41,7 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
             android:text="Item date"
             />
         <TextView
@@ -49,10 +53,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
             android:text="Item condition"
             />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnsendmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Request item" />
 
 
 </LinearLayout>

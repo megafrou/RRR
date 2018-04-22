@@ -371,8 +371,6 @@ public class NewItem extends AppCompatActivity implements View.OnClickListener {
         BackgroundItem backgroundItem = new BackgroundItem(this);
         backgroundItem.execute(type, path, currentDate, email, category, description, condition, ConvertImage);
 
-      //  Intent newintent = new Intent(this, DisplayListView.class);
-      //  this.startActivity(newintent);
 
     }
 }
